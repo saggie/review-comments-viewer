@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Review Comments Viewer for GitHub</title>
+</head>
+<body>
+  <h1>Review Comments Viewer for GitHub</h1>
+  <form id="comment-form">
+    <ul>
+      <li>
+        Repository:
+        <ul><li>
+          https://github.com /
+          <input type="text" id="owner" name="owner" placeholder="owner" size=15 required>
+          /
+          <input type="text" id="repo" name="repo" placeholder="repository" required>
+        </li></ul>
+      </li>
+      <li>
+        Since:
+        <input type="date" id="since" name="since" required>
+      </li>
+      <li>
+        User Name:
+        @<input type="text" id="user" name="user" placeholder="username" required>
+      </li>
+      <li>
+        Personal Access Token:
+        <input type="password" id="token" name="token" placeholder="github_pat_..." size=50 required>
+      </li>
+    </ul>
+
+    <button type="submit">View Comments</button>
+  </form>
+
+  <div id="comments-container"></div>
+  <button id="read-more" style="display: none;">Read More</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
